@@ -1,0 +1,26 @@
+subprojects {
+
+    apply plugin: 'java'
+    apply plugin: 'application'
+
+    group 'org.example'
+    version '1.0-SNAPSHOT'
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
+        testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
+        annotationProcessor("org.projectlombok:lombok:1.18.20")
+        compileOnly 'org.projectlombok:lombok:1.18.20'
+        implementation 'org.springframework.boot:spring-boot-starter-web:2.5.3'
+        implementation 'org.springframework.boot:spring-boot-starter-webflux:2.5.3'
+        implementation 'org.springframework.boot:spring-boot-configuration-processor:2.5.3'
+    }
+
+    test {
+        useJUnitPlatform()
+    }
+}

@@ -1,0 +1,5 @@
+rootProject.name = 'spirng-webclient-with-module'
+include 'consumer'
+include 'precos'
+include 'produtos'
+
